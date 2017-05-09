@@ -1,0 +1,12 @@
+.top-buffer { 
+	margin-top:20px; 
+}
+
+.mg-top-5 {
+	margin-top:5px;	
+}
+
+#allCode{
+	height: 380px;
+	overflow-y: auto;
+}
