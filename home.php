@@ -77,13 +77,16 @@
         });
          
         request.done(function( msg ) {
-          // console.log(msg);
-          if(typeof msg.code != 'undefined' && msg.code == 200 && msg.message == "success"){
+          if(typeof msg.code != 'undefined' && msg.code == 200 && msg.code_res == 1){
 
             $("#inputCode").val(msg.data);  
 
             $("#allCode").prepend('<input type="text" class="form-control mg-top-5 text-center" class="inputCode" value="' + msg.data + '" disabled>');
-
+          }else if(typeof msg.code != 'undefined' && msg.code == 200 && msg.code_res == -1){
+            $.alert({
+                title: 'Alert!',
+                content: 'Please comeback in 15 minutes!',
+            });
           }else{
             $.alert({
                 title: 'Alert!',
