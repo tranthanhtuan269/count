@@ -13,7 +13,7 @@
 	$v5 = floor(floor(floor(floor($temp / 36) / 36) / 36) / 36) % 36;
 	$v6 = floor(floor(floor(floor(floor($temp / 36) / 36) / 36) / 36) / 36) % 36;
 	
-	$ret =  	$arr[$v1].$arr[$v2] . ' - ' . $arr[$v3].$arr[$v4] . ' - ' . $arr[$v5].$arr[$v6];
+	$ret = $arr[$v1].$arr[$v2] . ' - ' . $arr[$v3].$arr[$v4] . ' - ' . $arr[$v5].$arr[$v6];
 
  	if ( isset($_POST) ) {
   	

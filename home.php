@@ -62,8 +62,10 @@
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>1
 <script type="text/javascript">
   $(document).ready(function(){
     $("#getCodeBtn").click(function(){
@@ -83,12 +85,18 @@
             $("#allCode").prepend('<input type="text" class="form-control mg-top-5 text-center" class="inputCode" value="' + msg.data + '" disabled>');
 
           }else{
-            alert("Request failed");
+            $.alert({
+                title: 'Alert!',
+                content: 'Request failed!',
+            });
           }
         });
          
         request.fail(function( jqXHR, textStatus ) {
-          alert( "Request failed: " + textStatus );
+          $.alert({
+              title: 'Alert!',
+              content: 'Request failed: ' + textStatus,
+          });
         });
 
     });
